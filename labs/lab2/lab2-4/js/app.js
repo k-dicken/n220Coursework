@@ -22,10 +22,10 @@ function draw() {
     }
     
     if (y > 600) {
-        v = vy * -1;
+        vy = vy * -1;
     }
     if (y < 0) {
-        v = vy * -1;
+        vy = vy * -1;
     }
 
     console.log(y)
