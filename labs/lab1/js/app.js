@@ -2,15 +2,12 @@ let whte = 255;
 let blck = 0;
 
 function setup() {
-    
     createCanvas(1280, 720);
     background(245, 230, 220);
-
 }
 
 
 function draw() {
-
     fill(175, 113, 122);
     stroke(175, 113, 122);
     rect(100, 600, 1080, 50);
