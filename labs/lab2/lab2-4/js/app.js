@@ -11,16 +11,20 @@ function setup() {
 function draw() {
     background(200)
     circle(x, y, 50);
+
+    // makes x & y move
     x = x + vx;
     y = y + vy;
 
-    if (x > 600) {
+    // reverses x velocity when hitting border
+    if (x > 800) {
         vx = vx * -1;
     }
     if (x < 0) {
         vx = vx * -1;
     }
-    
+
+    // reverses y velocity when hitting border
     if (y > 600) {
         vy = vy * -1;
     }
@@ -28,6 +32,9 @@ function draw() {
         vy = vy * -1;
     }
 
-    console.log(y)
+//     // console.log("y" + vy)
+//     console.log("x" + vx)
+//     console.log("x" + x)
+//     // console.log("y" + y)
 }
 
