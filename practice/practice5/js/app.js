@@ -1,11 +1,11 @@
-width = 400;
-height = 400;
+// width = 400;
+// height = 400;
 
-function setup() {
+// function setup() {
     
-    createCanvas(400, 400);
+//     createCanvas(400, 400);
 
-}
+// }
 
 // function draw() {
 //     // console.log(mouseX + " " + mouseY)
@@ -44,9 +44,17 @@ function setup() {
 
 // }
 
-function draw() {
-    background(250)
-    fill(255, 150, 0)
-    circle(width - mouseX, height - mouseY, 40)
-}
+// function draw() {
+//     background(250)
+//     fill(255, 150, 0)
+//     circle(width - mouseX, height - mouseY, 40)
+// }
+
+
+let vocaloidBanks = ["miku", "rin", "len", "luka", "kaito", "meiko", "gumi"];
+
+    for (var i = 0; i < vocaloidBanks.length; i++) {
+
+            console.log("I love " + vocaloidBanks[i]);
+    }
 
