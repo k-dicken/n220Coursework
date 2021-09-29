@@ -30,7 +30,7 @@ function draw() {
 
         positionsY[n] = positionsY[n] + 5;
         
-        // if the circle goes off the canvas (y = 800) 
+        // if the circle goes off the canvas 
         if (positionsY[n] >= canvasHeight) {
             positionsY.shift();
         }
