@@ -8,21 +8,35 @@ let player = {
 // enemy object
 let enemy = {
     hp: 20,
-    attack: 10,
+    attack: 12,
     defense: 5,
 }
 
+// creates all divs
 let enemyDiv = document.createElement("div");
 let attackButton = document.createElement("div");
 let playerDiv = document.createElement("div");
 let respawnButton = document.createElement("div");
 
 
+// 
+// --PLAYER & ENEMY DIVS / UPDATE FUNCTION
+// 
+
+// updates 
 function update() {
     playerDiv.innerHTML = "PLAYER <br> HP: " + player.hp + "<br> Attack: " + player.attack + "<br> Defense: " + player.defense;
 
     enemyDiv.innerHTML = "ENEMY <br> HP: " + enemy.hp + "<br> Attack: " + enemy.attack + "<br> Defense: " + enemy.defense;
 }
+
+// extra enemy HTML
+enemyDiv.style.marginTop = "40px"
+
+
+// 
+// --ATTACK BUTTON
+//
 
 // function to allow the player to attack and the enemy to attack back + update display
 function attackCycle() {
@@ -32,7 +46,7 @@ function attackCycle() {
     
 
     if (enemy.hp <= 0) {
-        enemyDiv.innerHTML = ("Defeated!")
+        enemyDiv.innerHTML = ("Defeated!");
 
     } else {
 
@@ -44,24 +58,13 @@ function attackCycle() {
     }
 
     if (player.hp <= 0) {
-        playerDiv.innerHTML = ("You Died!")
+        playerDiv.innerHTML = ("You Died!");
 
+        attackButton.style.display = "none";
     } 
 }
 
-function respawn() {
-    player.hp = 20;
-    playerDiv.innerHTML = "PLAYER <br> HP: " + player.hp + "<br> Attack: " + player.attack + "<br> Defense: " + player.defense;
-
-    enemy.hp = Math.floor(Math.random(1) * 50);
-    enemy.attack = Math.floor(Math.random(1) * 20);
-    enemy.defense = Math.floor(Math.random(1) * 15);
-    enemyDiv.innerHTML = "ENEMY <br> HP: " + enemy.hp + "<br> Attack: " + enemy.attack + "<br> Defense: " + enemy.defense;
-
-    
-}
-
-// button for function
+// attack button styling
 attackButton.innerHTML = "Attack";
 attackButton.style.height = "20px";
 attackButton.style.width = "60px";
@@ -71,12 +74,24 @@ attackButton.style.backgroundColor = "#ff0000";
 attackButton.setAttribute("onclick", "attackCycle()");
 
 
-// enemy HTML
-enemyDiv.style.marginTop = "40px"
+//
+// --RESPAWN BUTTON
+//
 
-// display HTML
-update();
+// respawns player and generates new enemy
+function respawn() {
+    player.hp = 20;
+    playerDiv.innerHTML = "PLAYER <br> HP: " + player.hp + "<br> Attack: " + player.attack + "<br> Defense: " + player.defense;
 
+    enemy.hp = Math.floor(Math.random(1) * 50);
+    enemy.attack = Math.floor(Math.random(1) * 20);
+    enemy.defense = Math.floor(Math.random(1) * 15);
+    enemyDiv.innerHTML = "ENEMY <br> HP: " + enemy.hp + "<br> Attack: " + enemy.attack + "<br> Defense: " + enemy.defense;
+
+    attackButton.style.display = "block";
+}
+
+// repspawn button styling
 respawnButton.innerHTML = "Respawn";
 respawnButton.style.height = "20px";
 respawnButton.style.width = "100px";
@@ -85,6 +100,15 @@ respawnButton.style.marginBottom = "50px"
 respawnButton.style.backgroundColor = "#ff00ff";
 respawnButton.setAttribute("onclick", "respawn()");
 
+
+// 
+// -- SENDING TO HTML
+// 
+
+// display HTML
+update();
+
+// places everything on page
 document.body.appendChild(respawnButton);
 document.body.appendChild(playerDiv);
 document.body.appendChild(attackButton);
