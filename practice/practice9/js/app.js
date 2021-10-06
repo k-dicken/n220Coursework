@@ -107,21 +107,17 @@
 // 
 let words = [ "Indiana", "University", "Purdue", "University", "Indianapolis" ];
 
-// var newString;
+var newString = " ";
 
 for (i = 0; i < words.length; i++) {
 
-    // newString =+ words[i];
-
-    // string =+ " " + words[i] + "! Yeah!";
-    // f = f + f;
-
-    console.log(words[i] + "! Yeah!");
+    newString = newString + (words[i] + "! Yeah! ");
+    
 }
 
-// f = f + " " + words[i] + "! Yeah!";
+console.log(newString);
 
-// console.log(newString);
+
 
 
 
