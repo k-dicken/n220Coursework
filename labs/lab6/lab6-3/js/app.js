@@ -1,4 +1,15 @@
 // player object
+// enemy object
+
+// update player & enemy HTML
+// function to allow the player to attack and the enemy to attack back + update display
+
+// create player div
+// create enemy div
+// create attack button
+
+
+// player object
 let player = {
     hp: 30,
     attack: 15,
@@ -80,7 +91,7 @@ attackButton.setAttribute("onclick", "attackCycle()");
 
 // respawns player and generates new enemy
 function respawn() {
-    player.hp = 20;
+    player.hp = 30;
     playerDiv.innerHTML = "PLAYER <br> HP: " + player.hp + "<br> Attack: " + player.attack + "<br> Defense: " + player.defense;
 
     enemy.hp = Math.floor(Math.random(1) * 50);

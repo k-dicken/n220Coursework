@@ -1,4 +1,13 @@
 // virtual pet with name, energy, happiness and age
+// display in HTML
+// update the info by replacing inner HTML
+// function for feeding to increase energy by 5
+// function for play to increase happiness
+// add buttons for feed
+// add button for play
+
+
+// virtual pet with name, energy, happiness and age
 let virtualPet = {
     name: "Rin",
     energy: 5,
