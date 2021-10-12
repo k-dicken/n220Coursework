@@ -1,3 +1,4 @@
+// array object for all games
 let zeldaGames = [
 
     {title: "The Original Legend of Zelda", console: "NES", ownedOn: "None", year: 1989},
@@ -14,13 +15,16 @@ let zeldaGames = [
 
 ];
 
-
+// loop to place each on page
 for (let i = 0; i < zeldaGames.length; i++) {
+
+    // html
     let itemDiv = document.createElement("div");
         itemDiv.innerHTML = `${zeldaGames[i].title} for the ${zeldaGames[i].console }<br> Released in ${zeldaGames[i].year} <br><br> Owned on ${zeldaGames[i].ownedOn}`;
         itemDiv.style.padding = "5px";
         itemDiv.style.marginBottom = "20px";  
 
+    // if i own it on original console make it yellow, don't own it at all make it dark gray, and own it on not original console make it light grey
     if (zeldaGames[i].console == zeldaGames[i].ownedOn) {
         itemDiv.style.backgroundColor = "#f0e69e";
 
@@ -33,6 +37,7 @@ for (let i = 0; i < zeldaGames.length; i++) {
 
     }
 
+    //place on page after all is decided
     document.body.appendChild(itemDiv);
 }
 

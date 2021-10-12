@@ -57,7 +57,7 @@ function draw() {
         // gameOverScreen.setAttribute("onclick", "reverseVel()"); 
         document.body.appendChild(gameOverScreen);
     }
-}/
+// }
 
 
 //function to reverse the circle

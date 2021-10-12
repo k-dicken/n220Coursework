@@ -3,7 +3,6 @@
 
 // update player & enemy HTML
 // function to allow the player to attack and the enemy to attack back + update display
-
 // create player div
 // create enemy div
 // create attack button
