@@ -36,9 +36,6 @@ let textDiv = document.getElementById("textDiv");
 
 //function checkLogin
 function checkLogin() {
-
-    console.log(user + " == " + userInput.value);
-    console.log(pass + " == " + passInput.value);
     
         //if userInput == user && passInput == pass
     if (userInput.value == user && passInput.value == pass) {
