@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concentration | Final Project</title>
+    <style> 
+        header {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }   
+        .header-section {
+            width: 28%;
+            padding: 0 10px;
+        }
+        .game {
+            display: flex;
+            flex-wrap: wrap;
+            width: 480px;
+        }  
+        .card {
+            display: inline-block;
+            margin: 10px; 
+            background-color: grey;
+        }
+        .line {
+            height: 1px;
+            background-color: black;
+            width: 100%;
+            margin-top: 40px;
+        }
+        #resetButton {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- header section -->
+    <header>    
+        <div class="header-section">
+            <h2>Concentration</h2>
+            <p style="margin-bottom: 30px;">Final Project by Kylee Dicken</p>
+        
+            <button class="gameButton" data-size="2" onclick="generateGame(event)">2x2 Game</button>
+            <button class="gameButton" data-size="4" onclick="generateGame(event)">4x4 Game</button>
+            <button class="gameButton" data-size="6" onclick="generateGame(event)">6x6 Game</button>
+            <br>
+            <br>
+            <button id="resetButton" onclick="reloadPage()">Reset Board</button>
+        </div>
+
+
+        <div style="text-align: center;" class="highscoreCounter header-section">
+            <h3>Your High Scores</h3>
+            <div style="display:flex; justify-content: space-between;">
+                <div>
+                    <h4>2x2</h4>
+                    <p class="highScore" data-game="2">-</p>
+                </div>
+                <div>
+                    <h4>4x4</h4>
+                    <p class="highScore" data-game="4">-</p>
+                </div>
+                <div>
+                    <h4>6x6</h4>
+                    <p class="highScore" data-game="6">-</p>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: right;" class="moveCounter header-section">
+            <h3># of Moves</h3>
+            <div id="pMoves">-</div>
+        </div>
+
+
+    </header>
+
+    <div class="line"></div>
+    <br>
+
+    <!-- game goes here -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js" integrity="sha512-N4kV7GkNv7QR7RX9YF/olywyIgIwNvfEe2nZtfyj73HdjCUkAfOBDbcuJ/cTaN04JKRnw1YG1wnUyNKMsNgg3g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
