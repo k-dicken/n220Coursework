@@ -4,36 +4,78 @@
 
 //
 
-//CHECK CARDS ON CLICK PSEDUO CODE
+//CHECK CARDS ON CLICK PSEUDO CODE
 
 //var prevbutton
 //var currentbutton
 
-//var selectCardOne = "";
-//var selectCardTwo = "";
+//var CardOne = "";
+//var CardTwo = "";
+
+//winAmount = [number of pairs in game];
+//winCount = 0;
 
 
 //function determineOutcome
-    //set event target background color to dataset color
+    //if card one or card two is not already clicked
+        //set event target background color to dataset color
+        //save the clicked card
 
     //if selectCardOne == "" 
         //set cardOne to event target's dataset color
+        //remove event listener
+
     //else if selectCardTwo == ""
         //set cardTwo to event target's dataset color
 
         //if selectcardone == selectcardtwo 
-            //set timeout set event target bg color to white
+            //set timeout 
+                // set event target bg color to white
+                // set prevbutton bg color to white
+                // reset card one and two
+
+            //remove event listeners from cards
+            //add 1 to win count
         //else 
-            //set timeout set event target bg color to grey
-            //set timeout set prevbutton bg color to grey
-    //
+            //set timeout 
+                //set event target bg color to grey
+                //set prevbutton bg color to grey
+                //add event listeners back
+                //reset cart one and two
+
+            
+    //if winamount == wincount
+        //set timeout
+            //alert 'game won'
+            //refresh page
 
 //
 
 //GENERATE GAME PSEUDO CODE
 
 //array of colors
+//length of array of colors
 
+//function generateGame
+    //remove extra colors from array using loop and .pop
+
+    //for game.dataset.size
+        //create card
+        //pick random color from array
+
+        //style cards
+        //add dataset.color of array color
+
+        //put card on page
+
+        //if a row is complete
+            //add br
+
+        //remove the used color from the array
+
+    //remove the generate game buttons from the page
+
+    //set win amoutnt to num of sets in game
 //
 
 //SAVE AND SET HIGH SCORES PSEUDO CODE
