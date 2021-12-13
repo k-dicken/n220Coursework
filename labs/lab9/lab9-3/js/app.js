@@ -1,26 +1,56 @@
-//Create an application with an array of strings, at least three. Create three buttons that are associated with those strings. (For instance, you might have 'home', 'about', and 'art'), and a div to display those strings. Using a single function, make it so that when a button is clicked, the div displays the string associated with it in that array. ("home" button shows index 0, "about" shows index 1, so on..).
+// Assume that there is a game where if there are three 1's in a row in will count as a "win". 
+// Create an application that: 
+// Takes input from the user in a text field
+// Assumes the input is a set of comma-separated values
+// Splits the input into an array
+// Uses a loop to check to see if there are three "1s" in a row in the array
+// Displays the word "winner" or "not winner" on the document depending on the result
 
 //
 
-//grab div
-//array = "item1, item2, item3"
+//grab user input
+//grab display div
 
-//function displayItem(arrayNum)
-    //div.innerHTML = array[arrayNum]
+//set global win count
+
+//function checkWin
+    //split user input
+    //for split length
+        //if split[i] == 1
+            //add 1 to win count
+        //else
+            //set win count to 0
+        
+        //if win count == 3
+            //display div inner html = winner 
+            //break 
+        //else
+            //display div inner html = not winner      
 
 //
 
-//grab div
+let numInput = document.getElementById("numInput");
 let displayDiv = document.getElementById("displayDiv");
 
-//array = "item1, item2, item3"
-let arrayItems = ["red", "green", "blue"];
+let winCount = 0;
 
-//function displayItem(arrayNum)
-function displayItems(arrayNum) {
-    
-    displayDiv.style.color = arrayItems[arrayNum];
+function checkWin(){
+    let inputNums = numInput.value.split(",");
 
-    //place array item in div
-    displayDiv.innerHTML = arrayItems[arrayNum];
+    for (i = 0; i < inputNums.length; i++) {
+
+        if (Number(inputNums[i]) == 1) {
+            winCount = winCount + 1;
+        } else {
+            winCount = 0;
+        }
+
+        if (winCount == 3) {
+            displayDiv.innerHTML = "Winner";
+            break;
+        } else {
+            displayDiv.innerHTML = "Not Winner";
+        }
+    }
+ 
 }
